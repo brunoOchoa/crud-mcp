@@ -1,0 +1,15 @@
+# Go
+*.exe
+*.out
+*.test
+vendor/
+
+# Node
+node_modules/
+dist/
+
+# Environment
+.env
+
+# Vite
+webui/.vite
