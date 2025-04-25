@@ -9,7 +9,7 @@ node_modules/
 dist/
 
 # Environment
-.env
+env.sh
 
 # Vite
 webui/.vite

@@ -5,7 +5,6 @@ import (
 	"net/http"
 
 	"github.com/brunoOchoa/db"
-	"github.com/brunoOchoa/handlers"
 	"github.com/brunoOchoa/models"
 	"github.com/brunoOchoa/router"
 )
@@ -15,6 +14,12 @@ func main() {
 	db.DB.AutoMigrate(&models.User{})
 	fmt.Println("Banco de dados conectado com sucesso!")
 
+	// handlers.CreateUser("Bruno", "Ativo")
+	// handlers.CreateUser("Su", "Inativo")
+	// handlers.CreateUser("Lizzie", "Ativo")
+
+	// handlers.ListUsers()
+
 	router.InitRoutes()
 
 	fs := http.FileServer(http.Dir("./webui/dist"))
@@ -22,9 +27,4 @@ func main() {
 
 	http.ListenAndServe(":8080", nil)
 
-	// handlers.CreateUser("Bruno", "Ativo")
-	// handlers.CreateUser("Su", "Inativo")
-	// handlers.CreateUser("Lizzie", "Ativo")
-
-	handlers.ListUsers()
 }
